@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import Encurtador_URL.DTO.urlDTO;
 import Encurtador_URL.Entities.Url;
 import Encurtador_URL.Exceptions.UrlException;
 import Encurtador_URL.Repositories.UrlRepository;
@@ -30,6 +29,7 @@ public class UrlService {
         return "http://localhost:8080/" + urlCurt;
     }
 
+    @Transactional(readOnly = true)
     public String searchUrlOriginal(String urlCurt){
 
         Optional<Url> urOptional = urlRepository.findByUrlCurt(urlCurt);
