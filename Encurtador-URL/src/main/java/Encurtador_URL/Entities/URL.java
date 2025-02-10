@@ -18,10 +18,16 @@ import lombok.Setter;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode
-public class URL {
+public class Url {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private String url;
+    private String urlOriginal;
+    private String urlCurt;
+
+    public Url(String urlOriginal, String urlCurt){
+        this.urlOriginal = urlOriginal;
+        this.urlCurt = urlCurt;
+    }
 }

@@ -15,7 +15,7 @@ import lombok.Setter;
 
 
 @Entity
-@Table(name = "tb_urlCurt")
+@Table(name = "tb_url_Curt")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -29,5 +29,10 @@ public class urlDTO {
     private String urlOriginal;
     private String urlCurt;
     private Date dateCreat;
+
+    public urlDTO(String urlOriginal, String urlCurt){
+        this.urlOriginal = urlOriginal;
+        this.urlCurt = urlCurt;
+    }
 
 }
