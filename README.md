@@ -18,7 +18,7 @@ Encurtador de link é uma aplicação backend. A aplicação consiste em uma sof
 ## Back end
 - Java
 - Spring Boot
-- JPA
+- JPA / Hibernate
 - Maven
   
 ## Implantação em produção
